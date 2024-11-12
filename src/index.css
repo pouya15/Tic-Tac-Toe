@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: #e1f5fe;
+    justify-content: center;
+}

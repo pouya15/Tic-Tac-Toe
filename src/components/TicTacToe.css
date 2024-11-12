@@ -1,0 +1,98 @@
+.gradient-border {
+    position: relative;
+    padding: 10px; /* Space for the border */
+    background-color: rgb(155, 208, 255); /* Background color of the box */
+    border-radius: 8px; /* Match the border radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); /* Gradient colors */
+    z-index: -1;
+    border-radius: 8px; /* Match the border radius */
+    padding: 5px; /* Adjust for border thickness */
+    filter: blur(5px); /* Optional: create a blurred effect for the border */
+  }
+  
+  .button {
+    background-color: #ffffff; /* Button background */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Light border for buttons */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: all 0.2s ease; /* Smooth transition for hover effect */
+  }
+  
+  .button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+
+
+  .next-player {
+    color: #ff9800; /* Orange color for the next player text */
+    font-weight: bold; /* Bold text */
+    font-size: 1.2rem; /* Slightly larger font size */
+    margin-top: 10px; /* Space above the text */
+    padding: 5px; /* Padding for better spacing */
+    border-radius: 4px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    text-align: center; /* Center align the text */
+  }
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); } /* Move left more */
+    50% { transform: translateX(10px); }  /* Move right more */
+    75% { transform: translateX(-10px); } /* Move left more */
+    100% { transform: translateX(0); }
+  }
+  
+  .winner-text {
+    animation: shake 1s ease-in-out; /* Longer duration for more emphasis */
+    color: #4caf50; /* Green color for winner text */
+    font-weight: bold; /* Bold text */
+    font-size: 40rem; /* Larger font size for emphasis */
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Space above the text */
+  }
+
+  .winning-line {
+    position: absolute; /* Position relative to the parent */
+    background-color: rgba(255, 0, 0, 0.7); /* Red color for the line */
+    height: 5px; /* Thickness of the line */
+    z-index: 10; /* Ensure it appears above the squares */
+  }
+  
+  /* Horizontal line */
+  .line-horizontal {
+    width: 100%; /* Full width for horizontal lines */
+  }
+  
+  /* Vertical line */
+  .line-vertical {
+    height: 100%; /* Full height for vertical lines */
+  }
+  
+  /* Diagonal line */
+  .line-diagonal {
+    width: 100%;
+    transform: rotate(45deg); /* Rotate for diagonal */
+    transform-origin: center; /* Set origin for rotation */
+  }
+  
+  /* Adjust for specific positions */
+  .line-diagonal-1 {
+    top: 0; /* Top left to bottom right */
+    left: 0;
+  }
+  
+  .line-diagonal-2 {
+    top: 0; /* Top right to bottom left */
+    right: 0;
+  }
